@@ -7,3 +7,4 @@ My Portfolio Website - Always a WIP (HTML, CSS, Javascript)
 3. Fix the Menu for Smartphone web browsers
 4. Refactor the code using CSS processors
 5. Embedd Codepen
+6. Add Scroll transitions on sections.
