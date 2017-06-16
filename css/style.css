@@ -1,0 +1,647 @@
+@font-face {
+  font-family: 'Didot';
+  src: url('../../Didot/Didot-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../../Didot/Didot-Bold?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../Didot/Didot-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../../Didot/Didot-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../Didot/Didot-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body {
+  margin: 0;
+}
+
+hr {
+  width: 70%;
+  border-top: 1px solid #ddd;
+}
+
+/*Logo SVG*/
+svg {
+  width: 50%;
+  height: 50%;
+  cursor: pointer;
+}
+
+svg g {
+  transform: translate(0px, 60px);
+  transition: transform cubic-bezier(0.65, 0.05, 0.36, 1) 0.7s;
+}
+
+.smile-curve {
+  fill: none;
+  transition: .5s;
+  stroke-dasharray: 800;
+  stroke-dashoffset: -800;
+  stroke: #FFFFFF;
+  stroke-width: 22;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  transition: stroke-dashoffset cubic-bezier(0.65, 0.05, 0.36, 1) 0.7s;
+}
+
+
+svg:hover .smile-curve {
+  stroke-dashoffset: 0;
+}
+
+svg:hover g {
+  transform: translate(0px, 0px);
+}
+
+/*CSS Utils*/
+
+/*Hide Element Class*/
+.hide {
+  display: none;
+}
+
+/*Top Margin*/
+.topm {
+  margin-top: 20px;
+}
+
+.full-container {
+  display: flex;
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.sidebar-container {
+  height: 100vh;
+  text-align: center;
+  z-index: 2;
+  padding: 15px;
+  width: 260px;
+  position: fixed;
+}
+
+/* logo */
+
+.logo {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.logo img {
+  width: 130px;
+}
+
+/* pitch section */
+
+.name {
+  font-family: 'Montserrat', sans-serif;
+  color: #800020;
+  margin-top: 30px;
+}
+
+.name h3 {
+  letter-spacing: 0.4px;
+}
+
+.title {
+  font-family: 'Source Code Pro', monospace;
+  color: #4A4A4A;
+}
+
+.title h3 {
+  font-size: 14px;
+}
+
+.pitch {
+  font-family: 'Montserrat', sans-serif;
+  color: #9B9B9B;
+  font-size: 14px;
+  padding: 0px 15px;
+  line-height: 23px;
+}
+
+.pitch > h4 {
+  font-weight: 300;
+}
+
+/* social icons */
+.social-icons {
+  color: #aaa;
+  margin-top: 35px;
+}
+
+.social-icons ul {
+  padding: 0;
+  list-style: none;
+}
+
+.social-icons li {
+  vertical-align: top;
+  display: inline;
+  height: 100px;
+  padding: 0px 3px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  outline: none;
+}
+
+
+.social-icons .fa {
+  padding: 10px;
+  cursor: pointer;
+  color: gray;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82);
+  transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82);
+}
+
+.social-icons .fa:hover {
+  background: #fff;
+  transition: .5s;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.social-icons .fa-github, .social-icons .fa-linkedin {
+  padding: 10px 12px;
+}
+
+
+/* main navigation */
+
+.navigation {
+  margin-top: 40px;
+}
+
+.navigation li {
+  padding: 12px 0px;
+}
+
+.navigation ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.navigation a {
+  font-family: 'Didot', sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  color: #800020;
+}
+
+.navigation a:after, .navigation a.active:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #800020;
+  transition: 0.4s;
+}
+
+.navigation a:hover:after, .navigation a.active:after {
+  width: 100%;
+}
+
+.navigation ul.sub-ul li {
+  text-align: left;
+  margin-left: 116px;
+  width: 100px;
+}
+
+.navigation ul.sub-ul li a {
+  font-size: 20px;
+}
+
+.navigation li.work:hover {
+
+}
+
+/* main container */
+
+.main-container {
+  width: 100%;
+  margin-left: 290px;
+  -moz-box-shadow: 0px 80px 110px -40px rgba(86, 119, 119, 0.68), 0px 5px 20px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 80px 110px -40px rgba(86, 119, 119, 0.68), 0px 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 80px 110px -40px rgba(86, 119, 119, 0.68), 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.section-title > h4, .work-section .section-title > h4, .codepen-section .section-title > h4, .blog-section .section-title > h4, .play-section .section-title > h4, .contact-section .section-title > h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #800020;
+  text-transform: uppercase;
+  padding: 0px 25px;
+}
+
+.section-title h5 {
+  color: #9B9B9B;
+  padding: 0px 25px;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 21px;
+}
+
+/* about section */
+.header-image {
+  background-image: url("../img/profile.png");
+  height: 330px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.main-pitch {
+  padding: 0px 25px;
+}
+
+.main-pitch h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #4A4A4A;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+
+strong {
+  color: #4A4A4A;
+  font-weight: 600;
+}
+
+/* work section */
+/* delve */
+
+.rivi-hero {
+  background-image: url("../img/delve-hero.png");
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
+
+.slider-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  height: 700px;
+  margin-top: 15px;
+  transition: .5s;
+}
+
+.mySlides {
+  width:100%
+}
+
+.slider-left-btn {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-100%,-50%);
+  border-radius: 50%;
+  border: 1px solid #800020;
+  color: #800020;
+  background-color: #fff;
+  transition: .5s;
+  padding: 8px 16px;
+  font-size: 22px;
+  cursor: pointer;
+  outline: none;
+}
+
+.slider-right-btn {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(100%,-50%);
+  border-radius: 50%;
+  border: 1px solid #800020;
+  color: #800020;
+  background-color: #fff;
+  transition: .5s;
+  padding: 8px 16px;
+  font-size: 22px;
+  cursor: pointer;
+  outline: none;
+}
+
+.slider-left-btn:hover, .slider-right-btn:hover {
+  color: #fff;
+  background-color: #800020;
+}
+
+
+.kaw-hero {
+  background-image: url("../img/kaw-hero.png");
+  height: 440px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
+
+.mathyogi-hero {
+  background-image: url("../img/mathyogi-hero.png");
+  height: 440px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
+
+.zilpa-hero {
+  background-image: url("../img/zilpa-hero.png");
+  height: 440px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
+
+.work-section .cta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0px 25px 20px 25px;
+}
+
+.work-section h4 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+  color: #4A4A4A;
+  text-transform: none;
+  padding-left: 0;
+}
+
+.work-section .detail-btn, .work-section .behance-btn {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #800020;
+  border: 1px solid #800020;
+  padding: 0px 20px;
+  border-radius: 20px;
+  line-height: 30px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.work-section .detail-btn:hover {
+  color: #fff;
+  background: #800020;
+  border: 1px solid #800020;
+}
+
+.work-section .behance-container {
+  text-align: center;
+}
+
+.work-section .behance-btn {
+  width: 170px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: .5s;
+}
+
+.work-section .behance-btn:hover {
+  color: #fff;
+  background: #800020;
+  border: 1px solid #800020;
+}
+
+.kaw-details, .mathyogi-details, .zilpa-details, .rivi-details {
+  padding: 0px 25px;
+}
+
+.work-section .kaw-details img, .mathyogi-details img, .zilpa-details img, .snap-mocks-details img, .rivi-details img  {
+  width: 100%;
+}
+
+.work-section .project-title {
+  font-family: 'Montserrat', sans-serif;
+  color: #800020;
+  text-transform: uppercase;
+}
+
+.work-section .project-section-title {
+  margin: 30px 0px 12px 0px;
+}
+
+.work-section .project-section-title a {
+  font-family: 'Didot', sans-serif;
+  font-size: 25px;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  color: #4a4a4a;
+  cursor: default;
+}
+
+.work-section .project-section-title a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #800020;
+}
+
+.work-section .project-introduction {
+  font-family: 'Montserrat', sans-serif;
+  color: #4A4A4A;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  margin-bottom: 17px;
+}
+
+.work-section .project-section-description {
+  font-family: 'Montserrat', sans-serif;
+  color: #4A4A4A;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+
+.kaw-rough-work {
+  text-align: center;
+}
+
+.work-section .kaw-details .kaw-rough-work img {
+  width: 60%;
+}
+
+.iframe {
+  text-align: center;
+}
+
+/*play section*/
+.sound-cloud {
+  margin-bottom: 60px;
+}
+
+#resume-container a {
+  text-decoration: none;
+  color: #800020;
+}
+
+#resume-container:hover a {
+  color: white;
+}
+
+/*contact section*/
+.contact-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.contact-section .download-btn {
+  width: 150px;
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #800020;
+  border: 1px solid #800020;
+  padding: 0px 20px;
+  border-radius: 20px;
+  line-height: 30px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.contact-section .download-btn:hover {
+  color: #fff;
+  background: #800020;
+  border: 1px solid #800020;
+}
+
+.contact-section h3 {
+  margin-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  padding: 0px 50px;
+  color: #777;
+}
+
+.contact-section h3 strong {
+  font-weight: 500;
+}
+
+.contact-section span a {
+  color: #800020;
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  color: #9B9B9B;
+  font-size: 13px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 992px) {
+  /*.menu-overlay {
+    dis
+  }*/
+
+  .mobile-hamburger {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    z-index: 100;
+  }
+
+  .mobile-hamburger a {
+    font-size: 6em;
+    color: #800020;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .menu-overlay li a {
+    font-size: 7em;
+    line-height: 2em;
+    text-decoration: none;
+    font-family: 'Didot', sans-serif;
+    color: #800020;
+  }
+
+  .menu-overlay li.work ul.sub-ul li a {
+    font-size: 5em;
+  }
+
+  strong {
+    font-weight: 100;
+  }
+
+  .sidebar-container {
+    display: none;
+  }
+
+  .main-container {
+    margin: 0px;
+  }
+
+  .kaw-hero, .mathyogi-hero, .zilpa-hero {
+    height: 600px;
+  }
+
+  .social-icons a {
+    font-size: 40px;
+  }
+
+  .main-pitch h3 {
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  .work-section h4 {
+    font-size: 35px;
+  }
+
+  .work-section .detail-btn {
+    font-size: 30px;
+    padding: 10px 40px;
+  }
+
+  .work-section .project-section-description {
+    font-size: 18px;
+    line-height: 50px;
+  }
+
+  .work-section .project-section-title a {
+    font-size: 30px;
+  }
+
+  .contact-section h3 {
+    line-height: 50px;
+  }
+
+  .contact-section .download-btn {
+    font-size: 30px;
+    padding: 10px 40px;
+    width: 225px;
+  }
+}
