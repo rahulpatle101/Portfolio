@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rahul Patle - UI/UX Designer & Developer - Portfolio - Bay Area" />
+  <meta name="keywords" content="UI Design, UX Design, Potfolio, HTML, CSS, Javascript, User Experience, User Interface, Development, Front End, Web Developer, iPhone, San Fransisco, Bay Area, Resume, Developer, UI/UX, Bootstrap" />
+  <meta name="author" content="Rahul Patle">
+  <meta name="robots" content="index, follow">
+  <meta name="revisit-after" content="3 month">
+  <title>Rahul Patle -  Portfolio - rahulpatle.com </title>
+  <!-- UX, Design, Bay Area -->
+
   <title>Rahul Patle - Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700|Source+Code+Pro" rel="stylesheet">
@@ -105,10 +114,10 @@
         <h4>About</h4>
       </div>
       <div class="main-pitch">
-        <h3><strong>Hello I'm Rahul</strong>, currently working full-time as a <strong>UX Engineer</strong> at Riviera Partners in <strong>San Fransisco</strong>.
+        <p><strong>Hello I'm Rahul</strong>, currently working full-time as a <strong>UX Engineer</strong> at Riviera Partners in <strong>San Fransisco</strong>.
           I have been designing and building <strong>web / smartphone</strong> apps for the past <strong>4 years</strong>.
-        </h3>
-        <h3>Always looking for new opportunities in <strong>UI/UX</strong> field in the <strong>Bay Area.</strong></h3>
+        </p>
+        <p>Always looking for new opportunities in <strong>UI/UX</strong> field in the <strong>Bay Area.</strong></p>
       </div>
     </div>
     <!-- Work Section -->
@@ -117,8 +126,10 @@
         <h4>Work</h4>
       </div>
       <div class="rivi-container" id="riviera">
-        <div class="rivi-hero"></div>
+        <div class="rivi-hero project-hero-img"></div>
         <div class="rivi-details hide">
+          <h4 class="project-title">Riviera Partners Web Apps</h4>
+          <h4 class="project-subtitle">UI Design & Development, Responsive Design, Mobile Web, Styleguide, React</h4>
           <div class="delve-details">
             <div class="project-section-title"><a href="">delve mobile web app</a></div>
             <div class="project-section-description">
@@ -149,8 +160,8 @@
               <img class="mySlides" src="img/slider/person-bg-min.png">
               <img class="mySlides" src="img/slider/application-inbox-min.png">
 
-              <button class="slider-left-btn" onclick="plusDivs(-1)">&#10094;</button>
-              <button class="slider-right-btn" onclick="plusDivs(1)">&#10095;</button>
+              <button class="slider-left-btn slider-btn" onclick="plusDivs(-1)">&#10094;</button>
+              <button class="slider-right-btn slider-btn" onclick="plusDivs(1)">&#10095;</button>
             </div>
             <div class="project-section-title"><a href="">sutro styleguide</a></div>
             <div class="project-section-description">
@@ -178,7 +189,7 @@
       </div>
 
       <div class="kaw-container" id="wharton">
-        <div class="kaw-hero"></div>
+        <div class="kaw-hero project-hero-img"></div>
         <div class="kaw-details hide">
           <h4 class="project-title">Wharton School of Business</h4>
           <h4 class="project-subtitle">Competitive Analysis, UI Design, and iTunes Submission Assets</h4>
@@ -193,7 +204,7 @@
             <br>Here is a summary chart of my analysis.
           </div>
           <div><img src="img/research_kaw.png"/></div>
-          <div class="project-section-title topm"><a href="">app screen mindmap and rough sketch wireframe</a></div>
+          <div class="project-section-title topm"><a href="">app screen sketch wireframe</a></div>
           <div class="project-section-description">
             To come up with better overview of goals and requirements of the app, I quickly jot down my thoughts and how to interconect with each other. Gathered some inspiration from existing journal apps layout, and draw rough sketch of layout of the app.
           </div>
@@ -204,11 +215,11 @@
           <div class="project-section-description">
             After successfully presenting and getting approval of wireframes from the stakeholders and engineering team I designed the full color screens using Adobe Illustrator, keeping the aesthetics of the Knowledge@Wharton brand.
           </div>
-          <div><img src="img/kaw_4.png"/></div>
-          <div><img src="img/kaw_3.png"/></div>
-          <div><img src="img/kaw_1.png"/></div>
-          <div><img src="img/kaw_2.png"/></div>
-          <div><img src="img/kaw_5.png"/></div>
+          <div class="topm"><img src="img/kaw_4.png"/></div>
+          <div class="topm"><img src="img/kaw_3.png"/></div>
+          <div class="topm"><img src="img/kaw_1.png"/></div>
+          <div class="topm"><img src="img/kaw_2.png"/></div>
+          <div class="topm"><img src="img/kaw_5.png"/></div>
           <div class="project-section-title"><a href="">app store submission</a></div>
           <div class="project-section-description">
             I <strong>designed and converted app icons</strong> for different dimensions so it can look great on all <strong>iPhones and iPads</strong>.
@@ -218,12 +229,8 @@
           <div class="topm"><img src="img/masterIcon.png"/></div>
           <div><img src="img/kaw_itunes1.png"/></div>
           <div><img src="img/kaw_itunes2.png"/></div>
-          <div class="project-section-title"><a href="">prototype</a></div>
-          <div class="project-section-description">
-            Here is a quick prototype of the app with some screens. Go ahead give it a tap.
-          </div>
-          <div class="iframe">
-            <iframe width="438" height="930" src="https://projects.invisionapp.com/share/KJC3RLTRD#/screens" frameborder="0" allowfullscreen></iframe>
+          <div class="project-section-description text-center">
+            <p><a href="https://itunes.apple.com/us/app/knowledge-wharton/id1089174135?mt=8">View in iTunes</a></p>
           </div>
         </div>
         <div class="cta">
@@ -233,7 +240,7 @@
         <hr>
       </div>
       <div class="mathyogi-container" id="mathyogi">
-        <div class="mathyogi-hero"></div>
+        <div class="mathyogi-hero project-hero-img"></div>
         <div class="mathyogi-details hide">
           <h4 class="project-title">MathYogi: Virtual Math Mentor</h4>
           <h4 class="project-subtitle">UI Design, Frontend development, Materialize CSS, Competitive analysis, Layout re-design, Mockups, Screenshots</h4>
@@ -279,7 +286,7 @@
         <hr>
       </div>
       <div class="zilpa-container" id="zilpa">
-        <div class="zilpa-hero"></div>
+        <div class="zilpa-hero project-hero-img"></div>
         <div class="zilpa-details hide">
           <h4 class="project-title">Zilpa: Authentic Crafts</h4>
           <h4 class="project-subtitle">UI Design, Android development, Inspiration UI, Layout design, Mockups, Screenshots</h4>
@@ -359,9 +366,9 @@
     <!-- Contact Section -->
     <div class="contact-section" id="contact">
       <div class="download-btn" id="resume-container"><a href="https://drive.google.com/file/d/0B-LILBMFh7F8RFR0NHVZZEk5ZWc/view?usp=sharing" target="_blank">View Resume</a></div>
-      <h3>I am currently looking for full time opportunities in UI/UX field in the Bay Area. Feel free to call at 415-471-7633 or <span><a href="mailto:rahulpatle101@gmail.com">drop me a message</a></span> at <span><a href="mailto:rahulpatle101@gmail.com">rahulpatle101@gmail.com</a></span></h3>
+      <p>I am currently looking for full time opportunities in UI/UX field in the Bay Area.</p> <p>Feel free to call at 415-471-7633 or <span><a href="mailto:rahulpatle101@gmail.com">drop me a message</a></span> at <span><a href="mailto:rahulpatle101@gmail.com">rahulpatle101@gmail.com</a></span></p>
       <div class="social-icons">
-        <ul >
+        <ul>
           <li>
             <a href="https://github.com/rahulpatle101/" target="_blank" class="social-icon">
               <i class="fa fa-github"></i>

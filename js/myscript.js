@@ -38,19 +38,19 @@ $(window).on("load", function() {
 
     //Hamburger
     $('#menu-btn').click(function(e){
-      $('#menu-btn').hide("slow");
-      $('#close-btn').show("slow");
+      $('#menu-btn').hide();
+      $('#close-btn').show();
       e.preventDefault();
 
-      $('.menu-overlay').show("slow");
+      $('.menu-overlay').animate({'opacity': 'show', 'paddingTop': 0}, 900);
     });
 
 
     $('#close-btn').click(function(e){
-      $('#close-btn').hide("slow");
-      $('#menu-btn').show("slow");
+      $('#close-btn').hide();
+      $('#menu-btn').show();
       e.preventDefault();
-      $('.menu-overlay').hide("slow");
+      $('.menu-overlay').animate({'opacity': 'hide', 'paddingBottom': 0}, 900);
     });
 
 

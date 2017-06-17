@@ -40,7 +40,6 @@ svg g {
   transition: stroke-dashoffset cubic-bezier(0.65, 0.05, 0.36, 1) 0.7s;
 }
 
-
 svg:hover .smile-curve {
   stroke-dashoffset: 0;
 }
@@ -59,6 +58,11 @@ svg:hover g {
 /*Top Margin*/
 .topm {
   margin-top: 20px;
+}
+
+/*Text Center*/
+.text-center {
+  text-align: center;
 }
 
 .full-container {
@@ -233,7 +237,7 @@ svg:hover g {
 }
 
 
-.section-title > h4, .work-section .section-title > h4, .codepen-section .section-title > h4, .blog-section .section-title > h4, .play-section .section-title > h4, .contact-section .section-title > h4 {
+.section-title > h4 {
   font-family: 'Montserrat', sans-serif;
   color: #800020;
   text-transform: uppercase;
@@ -256,11 +260,11 @@ svg:hover g {
   background-position: 50% 50%;
 }
 
-.main-pitch {
+.main-pitch, .contact-section {
   padding: 0px 25px;
 }
 
-.main-pitch h3 {
+p {
   font-family: 'Montserrat', sans-serif;
   color: #4A4A4A;
   font-size: 14px;
@@ -277,13 +281,6 @@ strong {
 /* work section */
 /* delve */
 
-.rivi-hero {
-  background-image: url("../img/delve-hero.png");
-  height: 400px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 25%;
-}
 
 .slider-container {
   position: relative;
@@ -298,12 +295,10 @@ strong {
   width:100%
 }
 
-.slider-left-btn {
+.slider-btn {
   position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(-100%,-50%);
   border-radius: 50%;
+  top: 50%;
   border: 1px solid #800020;
   color: #800020;
   background-color: #fff;
@@ -314,20 +309,14 @@ strong {
   outline: none;
 }
 
+.slider-left-btn {
+  left: 0%;
+  transform: translate(-100%,-50%);
+}
+
 .slider-right-btn {
-  position: absolute;
-  top: 50%;
   right: 0%;
   transform: translate(100%,-50%);
-  border-radius: 50%;
-  border: 1px solid #800020;
-  color: #800020;
-  background-color: #fff;
-  transition: .5s;
-  padding: 8px 16px;
-  font-size: 22px;
-  cursor: pointer;
-  outline: none;
 }
 
 .slider-left-btn:hover, .slider-right-btn:hover {
@@ -336,28 +325,27 @@ strong {
 }
 
 
-.kaw-hero {
-  background-image: url("../img/kaw-hero.png");
+.project-hero-img {
   height: 440px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 25%;
+}
+
+.rivi-hero {
+  background-image: url("../img/delve-hero.png");
+}
+
+.kaw-hero {
+  background-image: url("../img/kaw-hero.png");
 }
 
 .mathyogi-hero {
   background-image: url("../img/mathyogi-hero.png");
-  height: 440px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 25%;
 }
 
 .zilpa-hero {
   background-image: url("../img/zilpa-hero.png");
-  height: 440px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 25%;
 }
 
 .work-section .cta {
@@ -367,7 +355,7 @@ strong {
   padding: 0px 25px 20px 25px;
 }
 
-.work-section h4 {
+.work-section .cta h4 {
   font-family: 'Source Code Pro', monospace;
   font-weight: 600;
   color: #4A4A4A;
@@ -403,7 +391,6 @@ strong {
   width: 170px;
   display: inline-block;
   margin-top: 20px;
-  transition: .5s;
 }
 
 .work-section .behance-btn:hover {
@@ -416,7 +403,7 @@ strong {
   padding: 0px 25px;
 }
 
-.work-section .kaw-details img, .mathyogi-details img, .zilpa-details img, .snap-mocks-details img, .rivi-details img  {
+.work-section img {
   width: 100%;
 }
 
@@ -428,6 +415,14 @@ strong {
 
 .work-section .project-section-title {
   margin: 30px 0px 12px 0px;
+}
+
+.work-section .project-subtitle {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+  color: #4A4A4A;
+  text-transform: none;
+  padding-left: 0;
 }
 
 .work-section .project-section-title a {
@@ -522,20 +517,6 @@ strong {
   border: 1px solid #800020;
 }
 
-.contact-section h3 {
-  margin-top: 30px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 300;
-  letter-spacing: 1.2px;
-  padding: 0px 50px;
-  color: #777;
-}
-
-.contact-section h3 strong {
-  font-weight: 500;
-}
 
 .contact-section span a {
   color: #800020;
@@ -547,28 +528,44 @@ strong {
   font-family: 'Source Code Pro', monospace;
   color: #9B9B9B;
   font-size: 13px;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin: 40px 0px 20px 0px;
+  padding-bottom: 20px;
 }
 
 
 /* Media Queries */
 
-@media (max-width: 992px) {
-  /*.menu-overlay {
-    dis
-  }*/
+@media (max-width: 414px) {
+  .full-container {
+    display: block;
+    width: initial;
+  }
+
+  .header-image {
+    background-position: 46% 50%;
+    height: 220px;
+  }
+
+  .rivi-hero {
+    height: 200px;
+    background-position: 50% -22%;
+  }
+
+  .work-section .cta {
+    display: block;
+    text-align: -webkit-center;
+  }
 
   .mobile-hamburger {
     display: block;
     position: fixed;
-    bottom: 20px;
-    right: 50px;
+    bottom: 35px;
+    right: 35px;
     z-index: 100;
   }
 
   .mobile-hamburger a {
-    font-size: 6em;
+    font-size: 2.5em;
     color: #800020;
   }
 
@@ -578,22 +575,42 @@ strong {
     width: 100%;
     height: 100%;
     display: none;
+    left: 0px;
+    z-index: 90;
+  }
+
+  .menu-overlay ul {
+    height: 100%;
+    padding: 0;
+    margin: 20px auto;
+  }
+
+  .menu-overlay li {
+    list-style: none;
+    text-align: center;
+  }
+
+  .menu-overlay li.work ul a {
+    color: #aaa;
+    margin: 0px;
+  }
+
+  .menu-overlay li.work ul.sub-ul {
+    margin: 0px;
   }
 
   .menu-overlay li a {
-    font-size: 7em;
+    font-size: 2em;
     line-height: 2em;
     text-decoration: none;
     font-family: 'Didot', sans-serif;
     color: #800020;
   }
 
-  .menu-overlay li.work ul.sub-ul li a {
-    font-size: 5em;
-  }
+
 
   strong {
-    font-weight: 100;
+    font-weight: 300;
   }
 
   .sidebar-container {
@@ -605,43 +622,53 @@ strong {
   }
 
   .kaw-hero, .mathyogi-hero, .zilpa-hero {
-    height: 600px;
+    height: 200px;
   }
 
   .social-icons a {
-    font-size: 40px;
+    font-size: 30px;
   }
 
-  .main-pitch h3 {
+  /*.main-pitch h3 {
     font-size: 18px;
     line-height: 40px;
-  }
+  }*/
 
-  .work-section h4 {
+  /*.work-section h4 {
     font-size: 35px;
-  }
+  }*/
 
   .work-section .detail-btn {
-    font-size: 30px;
-    padding: 10px 40px;
+    width: 100px;
+    text-align: center;
   }
 
-  .work-section .project-section-description {
+  .slider-container {
+    height: auto;
+  }
+
+  #invision-prototype-container, #invision-prototype-title {
+    display: none;
+  }
+
+  #invision-prototype-container iframe {
+    display: none;
+  }
+
+  /*.work-section .project-section-description {
     font-size: 18px;
     line-height: 50px;
-  }
+  }*/
 
-  .work-section .project-section-title a {
+  /*.work-section .project-section-title a {
     font-size: 30px;
-  }
+  }*/
 
   .contact-section h3 {
-    line-height: 50px;
+    padding: 0 30px;
   }
 
   .contact-section .download-btn {
-    font-size: 30px;
-    padding: 10px 40px;
-    width: 225px;
+    width: 100px;
   }
 }
