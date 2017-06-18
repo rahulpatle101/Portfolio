@@ -36,15 +36,13 @@ $(window).on("load", function() {
       });
     });
 
-    //Hamburger
+    //Hamburger and Menu
     $('#menu-btn').click(function(e){
       $('#menu-btn').hide();
       $('#close-btn').show();
       e.preventDefault();
-
       $('.menu-overlay').animate({'opacity': 'show', 'paddingTop': 0}, 900);
     });
-
 
     $('#close-btn').click(function(e){
       $('#close-btn').hide();
@@ -52,8 +50,6 @@ $(window).on("load", function() {
       e.preventDefault();
       $('.menu-overlay').animate({'opacity': 'hide', 'paddingBottom': 0}, 900);
     });
-
-
 });
 
 function onScroll(event){

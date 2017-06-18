@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Didot';
-  src: url('../../Didot/Didot-Bold.eot'); /* IE9 Compat Modes */
-  src: url('../../Didot/Didot-Bold?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../../Didot/Didot-Bold.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../../Didot/Didot-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../../Didot/Didot-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('fonts//Didot/Didot-Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Didot/Didot-Bold?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Didot/Didot-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/Didot/Didot-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Didot/Didot-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 body {
@@ -196,6 +196,7 @@ svg:hover g {
   position: relative;
   padding-bottom: 5px;
   color: #800020;
+  font-weight: bold;
 }
 
 .navigation a:after, .navigation a.active:after {
@@ -582,7 +583,7 @@ strong {
   .menu-overlay ul {
     height: 100%;
     padding: 0;
-    margin: 20px auto;
+    margin-top: 30%;
   }
 
   .menu-overlay li {
@@ -597,6 +598,7 @@ strong {
 
   .menu-overlay li.work ul.sub-ul {
     margin: 0px;
+    display: block;
   }
 
   .menu-overlay li a {
@@ -629,15 +631,6 @@ strong {
     font-size: 30px;
   }
 
-  /*.main-pitch h3 {
-    font-size: 18px;
-    line-height: 40px;
-  }*/
-
-  /*.work-section h4 {
-    font-size: 35px;
-  }*/
-
   .work-section .detail-btn {
     width: 100px;
     text-align: center;
@@ -646,23 +639,6 @@ strong {
   .slider-container {
     height: auto;
   }
-
-  #invision-prototype-container, #invision-prototype-title {
-    display: none;
-  }
-
-  #invision-prototype-container iframe {
-    display: none;
-  }
-
-  /*.work-section .project-section-description {
-    font-size: 18px;
-    line-height: 50px;
-  }*/
-
-  /*.work-section .project-section-title a {
-    font-size: 30px;
-  }*/
 
   .contact-section h3 {
     padding: 0 30px;
