@@ -3,7 +3,6 @@
 $(window).on("load", function() {
     showDivs(1);
 
-
     //toggle project details
     $( ".detail-btn" ).click(function(e) {
       var element = e.target.id
@@ -11,6 +10,13 @@ $(window).on("load", function() {
       $(this).text(function(i, text){
         return text === "Show Details" ? "Hide Details" : "Show Details";
       })
+    });
+
+    //small device menu hide
+    $(".menu-overlay").find('a').on('click', function() {
+      $('.menu-overlay').animate({'opacity': 'hide', 'paddingBottom': 0}, 900);
+      $('#close-btn').hide();
+      $('#menu-btn').show();
     });
 
 

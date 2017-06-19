@@ -1,10 +1,11 @@
 @font-face {
   font-family: 'Didot';
-  src: url('fonts//Didot/Didot-Bold.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Didot/Didot-Bold?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/Didot/Didot-Bold.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/Didot/Didot-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/Didot/Didot-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('../fonts/Didot/Didot-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Didot/Didot-Bold?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Didot/Didot-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Didot/Didot-Bold.woff2') format('woff2'), /* Pretty Modern Browsers */
+       url('../fonts/Didot/Didot-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Didot/Didot-Bold.svg#Didot_Bold') format('svg'); /* Legacy iOS */
 }
 
 body {
@@ -537,6 +538,16 @@ strong {
 /* Media Queries */
 
 @media (max-width: 414px) {
+  @font-face {
+    font-family: 'Didot';
+    src: url('../fonts/Didot/Didot-Bold.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Didot/Didot-Bold?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Didot/Didot-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/Didot/Didot-Bold.woff2') format('woff2'), /* Pretty Modern Browsers */
+         url('../fonts/Didot/Didot-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/Didot/Didot-Bold.svg#Didot_Bold') format('svg'); /* Legacy iOS */
+  }
+
   .full-container {
     display: block;
     width: initial;
