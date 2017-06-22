@@ -66,6 +66,10 @@ svg:hover g {
   text-align: center;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
 .full-container {
   display: flex;
   width: 1170px;
@@ -75,12 +79,14 @@ svg:hover g {
 }
 
 .sidebar-container {
-  height: 100vh;
   text-align: center;
   z-index: 2;
   padding: 15px;
   width: 260px;
   position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
 }
 
 /* logo */

@@ -11,6 +11,14 @@ $(window).on("load", function() {
         return text === "Show Details" ? "Hide Details" : "Show Details";
       })
     });
+    //toggle project details
+    $( ".project-hero-img" ).click(function(e) {
+      var element = e.target.id
+      $('.'+element).fadeToggle("slow");
+      $("#"+element+".detail-btn").text(function(i, text){
+        return text === "Show Details" ? "Hide Details" : "Show Details";
+      })
+    });
 
     //small device menu hide
     $(".menu-overlay").find('a').on('click', function() {
